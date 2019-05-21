@@ -1,0 +1,593 @@
+/* 公共样式 */
+
+/* 版心 */
+* {
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after {
+    visibility:hidden;
+    clear:both;
+    display:block;
+    content:"";
+    height:0
+}
+.clearfix {
+    *zoom:1
+}
+body {
+  background-color: #F0F3EF;
+  /* height: 2000px; */
+  font:12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif
+}
+.w {
+    width: 1190px;
+    margin: auto;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+i {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+input {
+  outline: none;
+}
+.iconfont {
+  font-family: 'icomoon';
+  font-style: normal;
+}
+.style-red {
+  color: #f10215!important;
+  font-style: normal;
+}
+/* 声明字体图标 */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?rrg3k2');
+  src:  url('../fonts/icomoon.eot?rrg3k2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?rrg3k2') format('truetype'),
+    url('../fonts/icomoon.woff?rrg3k2') format('woff'),
+    url('../fonts/icomoon.svg?rrg3k2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* 头部导航栏开始 */
+.shortcut {
+  background-color: #E3E4E5;
+  border-bottom: 1px solid #DDDDDD;
+}
+.shortcut div.w{
+  background-color: #E3E4E5;
+  height: 30px;
+  border-bottom: 1px solid #DDDDDD;
+  line-height: 28px;
+}
+.shortcut a {
+  font: 12px Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+  color: #B9B9BA;
+  text-decoration: none;
+  text-align: center;
+  padding: 0 2px;
+}
+.shortcut a:hover {
+  color: #f10215;
+}
+.shortcut .fl {
+  margin-left: 200px;
+}
+.shortcut .fl li {
+  position: relative;
+  font: 12px/28px Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+  color: #B9B9BA;
+}
+/* 地区下拉菜单开始 */
+.ui-areamini-text{
+  position: relative;
+  padding: 0 7px 2px;
+  z-index: 3;
+}
+.shortcut .dt.hover{  /* 鼠标进入后的公共样式 */
+  background-color:#fff;
+  border: 1px solid #ccc;/* 确保样式能够覆盖所有权重 */
+  border-bottom: 0; 
+  position: relative;
+  z-index: 3;
+}
+.shortcut .dt{ /* dt公共样式 */
+  border: 1px solid rgba(0, 0, 0, 0); /* 确保显示的时候周围的元素不会移动 */
+  border-bottom: 0; 
+}
+.dropdown-layer{/* 下拉列表公共样式 */
+  background-color: #fff;
+  position: absolute;
+  z-index: 2;
+  box-shadow: 1px 2px 1px rgba(0,0,0,.1);
+  border: 1px solid #ccc;
+  display: none;
+  margin-top: -1px;
+}
+.shortcut .fl .dd{
+  width: 300px;
+  padding: 10px;
+  position: absolute; /* 因为单独调用dropdown-layer的层级不够所以在这里单独声明 */
+}
+.dd a{
+  color: #999;
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+}
+.dropdown-layer a.selected{
+  background-color: #f10215;
+  color: #fff;
+}
+.dropdown-layer a:hover.selected{
+  background-color: #f10215;
+  color: #fff;
+}
+/* 中国省份列表 */
+.ui-areamini-content-wrap{
+  overflow: hidden;
+}
+.ui-areamini-content-wrap div{
+  float: left;
+  width: 60px;
+  height: 26px;
+  padding: 2px 0;
+}
+.ui-areamini-content-wrap div a{
+  display: block;
+  width: 40px;
+  padding: 0 8px;
+}
+.ui-areamini-content-wrap div a:hover{
+  background-color: #f4f4f4;
+}
+/* 港澳及国外地区 */
+.areamini_inter{
+  overflow: hidden; /* 清除浮动 */
+}
+.areamini_inter p{
+  margin: 9px 0;
+}
+.areamini_inter div{
+  float: left;
+  width: 120px;
+  color: #999;
+}
+/* 地区下拉菜单结束 */
+/* 我的京东开始 */
+.myjdlist{
+  width: 265px;
+  padding: 10px 0 10px 10px;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+}
+#ttbar-myjd .dd ul{
+  width: 126px;
+  float: left;
+  overflow: hidden;
+}
+#ttbar-myjd .dd li{
+  display: block;
+  width: 100%;
+  height: 24px;
+}
+/* 我的京东结束 */
+/* 企业采购开始 */
+/*
+测试使用 
+.shortcut_btn_company .dropdown-layer{
+  display: block;
+} */
+.shortcut_btn_company .dd{
+  padding: 10px 0 10px 10px;
+  overflow: hidden;
+  width: 142px;
+}
+.shortcut_btn_company .dd li{
+  width: 65px;
+  height: 24px;
+}
+/* 企业采购结束 */
+/* 客户服务开始 */
+#ttbar-serv {
+  position: relative;
+}
+#ttbar-serv .dropdown-layer{
+  right: 0;
+  /* display: block; 测试用*/
+}
+#ttbar-serv .dd{
+  padding: 10px 0 10px 10px;
+}
+#ttbar-serv ul li{
+  width: 85px;
+  height: 24px;
+  line-height: 24px;
+  font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+}
+#ttbar-serv ul li.item-client{
+  width: 170px;
+  font-weight: 700;
+  color: #666;
+}
+#ttbar-serv ul li.item-business{
+  width: 170px;
+  font-weight: 700;
+  color: #666;
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px dotted #eee;
+}
+/* 客户服务结束 */
+/* 网站导航开始 */
+#ttbar-navs .dd{
+  position: absolute;
+  width: 1188px;
+  padding: 15px 0;
+  right: 0px;
+  /* display: block;测试用 */
+  overflow: hidden;
+}
+#ttbar-navs .dd dt{
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #666;
+}
+#ttbar-navs .dropdown-layer dl{
+  float: left;
+  width: 255px;
+  padding-left: 20px;
+  border-left: 1px solid #eee;
+}
+#ttbar-navs .dropdown-layer dl.fore1{
+  width: 340px;
+  border-left: 0;
+}
+#ttbar-navs .dropdown-layer dd{
+  overflow: hidden;
+  float: left;
+  width: 85px;
+  height: 24px;
+  white-space: nowrap;
+}
+/* 网站导航结束 */
+
+.shortcut .iconfont {
+  font-size: 14px;
+  position: relative;
+  top: 2px;
+}
+.shortcut .fr {
+  position: relative;
+}
+.shortcut .fr li {
+  float: left;
+}
+.shortcut .fr .spacer {
+  margin: 10px 10px;
+  height: 10px;
+  width: 1px;
+  background-color: #B9B9BA;
+}
+.shortcut .shortcut_drapdown {
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  font-size: 20px;
+  color: #B9B9BA;
+  margin-left: -8px;
+  position: relative;
+  top: 1px;
+}
+/* 手机京东开始*/
+#J_mobile .dt span:nth-child(1){
+  display: block;
+  font: 12px Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+  color: #B9B9BA;
+  text-align: center;
+  height: 100%;
+  line-height: 30px;
+  padding: 0 2px;
+
+}
+.shortcut .mobile_static {
+  padding: 0;
+  margin: 2px;
+  border: 1px solid #CFCFCF;
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  width: 66px;
+  height: 66px;
+  z-index: 1;
+  background: url(../images/mobile_qrcode.png) no-repeat 50% 50%;
+}
+.mobile_pop:before, .mobile_static:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: -9px;
+  right: 50%;
+  margin-right: -5px;
+  width: 0;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #e4e4e4 #e4e4e4 #f6f6f6;
+}
+.mobile_pop:before{
+  right: 25px;
+}
+#J_mobile .dropdown-layer{
+  /* display: block;测试用 */
+  right: 0;
+}
+#J_mobile .mobile_pop_item {
+  position: relative;
+  z-index: 5;
+  padding: 15px 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+#J_mobile .mobile_pop_qrcode {
+  position: absolute;
+  left: 5px;
+  top: 14px;
+  width: 74px;
+  height: 74px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+}
+.mobile_pop_qrcode img {
+  width: 70px;
+  height: 70px;
+  margin: 2px 0 0 2px;
+}
+.mobile_pop_info {
+  margin: 0 10px 0 86px;
+  min-height: 70px;
+}
+
+.mobile_pop_tit {
+  font-size: 12px;
+  line-height: 17px;
+  color: #666 !important;
+}
+.mobile_pop_tit a {
+  font-weight: 700;
+  color: #666 !important;
+}
+.mobile_pop_value {
+  margin: 3px 0;
+  line-height: 14px;
+  color: #f10214;
+}
+.mobile_pop_device {
+  overflow: hidden;
+  height: 25px;
+}
+.mobile_pop_device_lk {
+  overflow: hidden;
+  float: left;
+  margin-right: 2px;
+  width: 25px;
+  height: 25px;
+  text-indent: -999px;
+}
+.mobile_pop_device_lk {
+  background-image: url(../images/sprite_mobile@1x.png);
+  background-size: 25px 77px;
+}
+.mobile_pop_device_ios {
+  background-position: 0 0;
+}
+.mobile_pop_device_and {
+  background-position: 0 -26px;
+}
+.mobile_pop_device_pad {
+  background-position: 0 -52px;
+}
+/* 手机京东结束*/
+/* 头部导航栏结束 */
+/* the footer start */
+/* the service part */
+.mod_service {
+  padding: 30px 0;
+  border-bottom: 1px solid #DEDEDE;
+}
+.mod_service li {
+  float: left;
+}
+.mod_service p {
+  float: left;
+}
+.mod_service li {
+  width: 297px;
+}
+.mod_service li div {
+  position: relative;
+  width: 180px;
+  margin: 0 auto;
+  padding-left: 45px;
+}
+.mod_service li h5 {
+  position: absolute;
+  left: 0;
+  width: 36px;
+  height: 42px;
+  text-indent: -99999px;
+  overflow: hidden;
+  background: url(../images/sprite.footer@2x.png) no-repeat;
+  background-size: 113px 86.5px;
+}
+.mod_service li .kuai {
+  background-position: -38px 0;
+}
+.mod_service li .hao {
+  background-position: -77px 0;
+}
+.mod_service li .sheng {
+  background-position: 0px -45px;
+}
+.mod_service li p {
+  height: 42px;
+  line-height: 42px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #444;
+}
+/* the help part */
+.mod_help {
+  height: 200px;
+}
+.mod_help .w {
+  overflow: hidden;
+  padding: 20px 0;
+  border-bottom: 1px solid #DEDEDE;
+}
+.help_nav_tit {
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+  display: block;
+}
+.mod_help a {
+  display: block;
+  font-size: 12px;
+}
+.mod_help a:hover {
+  color: #f10215;
+}
+.mod_help .fl {
+  width: 198px;
+  line-height: 22px;
+}
+.mod_help .fr {
+  width: 200px;
+  height: 150px;
+  line-height: 22px;
+  background: url(../images/sprite.footer.png) no-repeat;
+}
+.mod_help .fr div {
+  padding: 0 10px;
+  overflow: hidden;
+}
+.mod_help .fr h5 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.mod_help .fr p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666;
+}
+.mod_help .fr a {
+  display: inline;
+}
+.mod_help .mod_help_cover_more {
+  width: 180px;
+  text-align: right;
+}
+.mod_help .fr a:hover {
+  color: #f10215;
+}
+/* the copyright part */
+/* the mod_copyright_links part */
+.mod_copyright .w {
+  padding: 20px 0;
+}
+.mod_copyright p {
+  width: 1190px;
+  text-align: center;
+  font-size: 12px;
+}
+.mod_copyright .w a:hover {
+  color: #f10215;
+}
+.mod_copyright .mod_copyright_links a {
+  color: #666;
+}
+.mod_copyright .spacer {
+  margin: 0 10px;
+  color: #ccc;
+}
+/* the mod_copyright_info part */
+.mod_copyright .mod_copyright_info {
+  padding: 15px 0;
+}
+.mod_copyright .mod_copyright_info p {
+  display: block;
+  padding: 5px 0;
+}
+.mod_copyright .mod_copyright_info a,span {
+  color: #999;
+}
+.mod_copyright_info a i {
+  display: inline-block;
+  vertical-align: -1px;
+  margin-right: 10px;
+  width: 15px;
+  height: 12px;
+  background: url(../images/sprite.footer@2x.png) no-repeat;
+  background-size: 113px 86.5px;
+}
+.mod_copyright_info a .Global {
+  background-position: -38.5px -44.5px;
+}
+.mod_copyright_info a .rissia {
+  background-position: -56px -44.5px;
+}
+.mod_copyright_info a .indonesia {
+  background-position: -73.5px -44.5px;
+}
+.mod_copyright_info a .spain {
+  background-position: -38.5px -59px;
+}
+.mod_copyright_info a .thailand {
+  background-position: -91px -44.5px;
+}
+/* the mod_copyright_auth part */
+.mod_copyright_auth {
+  text-align: center;
+  margin: 25px 0; 
+}
+.mod_copyright_auth a {
+  display: inline-block;
+  margin: 0 3px;
+  width: 103px;
+  height: 32px;
+  overflow: hidden;
+  text-indent: -99999px;
+  background: url(../images/sprite.footer.png) no-repeat;
+}
+.mod_copyright_auth .kexin {
+  background-position: -205px -111px;
+}
+.mod_copyright_auth .wangjing {
+  background-position: -205px -74px;
+}
+.mod_copyright_auth .chengxin {
+  background-position: -205px -37px;
+}
+.mod_copyright_auth .jubao {
+  background-position: -205px 0px;
+}
+.mod_copyright_auth .appxiazai {
+  background-position: -205px -148px;
+}
+/* the footer end */
